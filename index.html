@@ -577,9 +577,398 @@ const audioFinish = new Audio('https://www.soundjay.com/misc/sounds/bell-ringing
 // CƠ SỞ DỮ LIỆU ĐƯỢC CHẮT LỌC & TỐI ƯU HÓA (GIỮ NGUYÊN)
 // ==========================================
 const ALL_BANKS = {
-"bai_13": { mcq: [ { q: "Khối lượng riêng của một chất cho ta biết", a: "khối lượng của một đơn vị thể tích chất đó.", o: [ "thể tích của một đơn vị khối lượng chất đó.", "khối lượng của một đơn vị thể tích chất đó.", "trọng lượng của một đơn vị thể tích chất đó.", "khối lượng của vật đó." ], e: "Theo định nghĩa, khối lượng riêng của một chất cho biết khối lượng của một đơn vị thể tích chất đó." }, { q: "Đơn vị nào sau đây KHÔNG phải là đơn vị đo khối lượng riêng?", a: "\(N/m^3\)", o: [ "\(kg/m^3\)", "\(g/cm^3\)", "\(g/mL\)", "\(N/m^3\)" ], e: "\(N/m^3\) là đơn vị của trọng lượng riêng, không phải khối lượng riêng." }, { q: "Công thức tính khối lượng riêng của một chất là", a: "\(D = \\frac{m}{V}\)", o: [ "\(D = \\frac{V}{m}\)", "\(D = \\frac{P}{V}\)", "\(D = \\frac{m}{V}\)", "\(m = \\frac{D}{V}\)" ], e: "Khối lượng riêng được xác định bằng khối lượng chia cho thể tích tương ứng: \(D = \\frac{m}{V}\)." }, { q: "Mối liên hệ giữa các đơn vị đo khối lượng riêng nào sau đây là ĐÚNG?", a: "\(1\\text{ g/cm}^3 = 1000\\text{ kg/m}^3\)", o: [ "\(1\\text{ kg/m}^3 = 1000\\text{ g/cm}^3\)", "\(1\\text{ g/cm}^3 = 1000\\text{ kg/m}^3\)", "\(1\\text{ g/mL} = 1\\text{ kg/m}^3\)", "\(1\\text{ kg/m}^3 = 1\\text{ g/cm}^3\)" ], e: "\(1\\text{ g/cm}^3 = \\frac{10^{-3}\\text{ kg}}{10^{-6}\\text{ m}^3} = 1000\\text{ kg/m}^3\)." }, { q: "Một khối sắt có khối lượng 7800 kg và thể tích \(1\\text{ m}^3\). Khối lượng riêng của sắt là", a: "\(7800\\text{ kg/m}^3\).", o: [ "\(7800\\text{ kg/m}^3\).", "\(780\\text{ kg/m}^3\).", "\(78\\text{ kg/m}^3\).", "\(7,8\\text{ kg/m}^3\)." ], e: "Áp dụng công thức: \(D = \\frac{m}{V} = \\frac{7800}{1} = 7800\\text{ kg/m}^3\)." }, { q: "Một vật làm bằng nhôm có thể tích \(0,002\\text{ m}^3\) và khối lượng 5,4 kg. Khối lượng riêng của nhôm là", a: "\(2700\\text{ kg/m}^3\).", o: [ "\(270\\text{ kg/m}^3\).", "\(2700\\text{ kg/m}^3\).", "\(10,8\\text{ kg/m}^3\).", "\(1080\\text{ kg/m}^3\)." ], e: "Áp dụng công thức: \(D = \\frac{m}{V} = \\frac{5,4}{0,002} = 2700\\text{ kg/m}^3\)." }, { q: "Biết khối lượng riêng của nước là \(1000\\text{ kg/m}^3\). Khối lượng của \(0,5\\text{ m}^3\) nước là", a: "500 kg.", o: [ "500 kg.", "2000 kg.", "50 kg.", "5000 kg." ], e: "Từ \(D = \\frac{m}{V} \\Rightarrow m = D \\cdot V = 1000 \\cdot 0,5 = 500\\text{ kg}\)." }, { q: "Một chai chứa đầy 2 lít dầu ăn. Biết khối lượng riêng của dầu ăn là \(800\\text{ kg/m}^3\). Khối lượng dầu ăn trong chai là", a: "1,6 kg.", o: [ "1,6 kg.", "1600 kg.", "400 kg.", "0,4 kg." ], e: "Đổi 2 lít = \(0,002\\text{ m}^3\). Khối lượng: \(m = D \\cdot V = 800 \\cdot 0,002 = 1,6\\text{ kg}\)." }, { q: "Khẳng định nào sau đây là ĐÚNG khi nói về khối lượng riêng của một chất?", a: "Khối lượng riêng của một chất là khối lượng của một đơn vị thể tích chất đó.", o: [ "Khối lượng riêng phụ thuộc vào hình dạng của vật.", "Khối lượng riêng của một chất là khối lượng của một đơn vị thể tích chất đó.", "Khi chia đôi vật, khối lượng riêng của vật giảm đi một nửa.", "Mọi chất đều có cùng một khối lượng riêng." ], e: "Khối lượng riêng là đại lượng đặc trưng cho bản chất chất liệu, không đổi khi chia nhỏ hay thay đổi hình dạng vật." }, { q: "Một khối đá có khối lượng 5,2 tấn và khối lượng riêng là \(2600\\text{ kg/m}^3\). Thể tích của khối đá là", a: "\(2\\text{ m}^3\).", o: [ "\(2\\text{ m}^3\).", "\(0,5\\text{ m}^3\).", "\(20\\text{ m}^3\).", "\(0,02\\text{ m}^3\)." ], e: "Đổi 5,2 tấn = 5200 kg. Thể tích: \(V = \\frac{m}{D} = \\frac{5200}{2600} = 2\\text{ m}^3\)." }, { q: "Để chuyển đổi đơn vị từ g/mL sang \(\\text{kg/m}^3\), ta thực hiện phép tính nào?", a: "Nhân với 1000.", o: [ "Nhân với 1000.", "Chia cho 1000.", "Giữ nguyên giá trị.", "Nhân với 100." ], e: "\(1\\text{ g/mL} = 1\\text{ g/cm}^3 = 1000\\text{ kg/m}^3\), do đó cần nhân với 1000." }, { q: "Khối lượng riêng của đồng là \(8900\\text{ kg/m}^3\). Một khối đồng có thể tích \(10\\text{ cm}^3\) sẽ có khối lượng là", a: "89 g.", o: [ "89 g.", "8,9 g.", "890 g.", "0,89 g." ], e: "Đổi \(8900\\text{ kg/m}^3 = 8,9\\text{ g/cm}^3\). Khối lượng: \(m = D \\cdot V = 8,9 \\cdot 10 = 89\\text{ g}\)." }, { q: "Khi nói \"Khối lượng riêng của nhôm là \(2700\\text{ kg/m}^3\)\", ý nghĩa của câu này là", a: "\(1\\text{ m}^3\) nhôm có khối lượng là 2700 kg.", o: [ "\(1\\text{ m}^3\) nhôm có khối lượng là 2700 kg.", "1 kg nhôm có thể tích là \(2700\\text{ m}^3\).", "\(2700\\text{ m}^3\) nhôm có khối lượng là 1 kg.", "2700 kg nhôm có trọng lượng là \(1\\text{ m}^3\)." ], e: "Khối lượng riêng biểu thị khối lượng của \(1\\text{ m}^3\) chất đó, nên \(1\\text{ m}^3\) nhôm có khối lượng 2700 kg." }, { q: "Hai thỏi sắt và nhôm có cùng thể tích. Biết khối lượng riêng của sắt là \(7800\\text{ kg/m}^3\) và của nhôm là \(2700\\text{ kg/m}^3\). Khẳng định nào sau đây ĐÚNG?", a: "Thỏi sắt có khối lượng lớn hơn thỏi nhôm.", o: [ "Thỏi sắt có khối lượng lớn hơn thỏi nhôm.", "Thỏi nhôm có khối lượng lớn hơn thỏi sắt.", "Hai thỏi có khối lượng bằng nhau.", "Không thể so sánh được khối lượng của hai thỏi." ], e: "Vì \(m = D \\cdot V\), khi cùng thể tích V thì chất có D lớn hơn sẽ có khối lượng m lớn hơn (\(7800 > 2700\))." }, { q: "Một bình chia độ chứa 50 mL nước. Thả chìm hoàn toàn một vật rắn không thấm nước vào bình thì mực nước dâng lên đến vạch 80 mL. Cân vật rắn thấy khối lượng là 81 g. Khối lượng riêng của chất làm vật rắn là", a: "\(2,7\\text{ g/cm}^3\).", o: [ "\(2,7\\text{ g/cm}^3\).", "\(1,62\\text{ g/cm}^3\).", "\(1,01\\text{ g/cm}^3\).", "\(27\\text{ g/cm}^3\)." ], e: "Thể tích vật: \(V = 80 - 50 = 30\\text{ mL} = 30\\text{ cm}^3\). Khối lượng riêng: \(D = \\frac{m}{V} = \\frac{81}{30} = 2,7\\text{ g/cm}^3\)." }, { q: "Trong các yếu tố sau đây, khối lượng riêng của một chất phụ thuộc vào yếu tố nào?", a: "Bản chất của chất đó.", o: [ "Bản chất của chất đó.", "Khối lượng của vật.", "Thể tích của vật.", "Hình dạng của vật." ], e: "Khối lượng riêng là đại lượng đặc trưng riêng cho bản chất của mỗi chất." }, { q: "Ba thỏi đồng, sắt, nhôm có cùng khối lượng. Biết khối lượng riêng lần lượt là \(8900\\text{ kg/m}^3\), \(7800\\text{ kg/m}^3\), \(2700\\text{ kg/m}^3\). Thỏi có thể tích lớn nhất là", a: "thỏi nhôm.", o: [ "thỏi nhôm.", "thỏi sắt.", "thỏi đồng.", "ba thỏi có thể tích bằng nhau." ], e: "Từ \(V = \\frac{m}{D}\), với m không đổi, chất có khối lượng riêng D nhỏ nhất (nhôm) sẽ có thể tích lớn nhất." }, { q: "Kí hiệu của khối lượng riêng trong vật lí là gì?", a: "D", o: [ "D", "m", "V", "d" ], e: "Khối lượng riêng được kí hiệu bằng chữ D (Density)." }, { q: "Một khối gỗ hình hộp chữ nhật có kích thước 2 m, 0,5 m và 0,4 m. Khối lượng khối gỗ là 320 kg. Khối lượng riêng của khối gỗ là", a: "\(800\\text{ kg/m}^3\).", o: [ "\(800\\text{ kg/m}^3\).", "\(80\\text{ kg/m}^3\).", "\(128\\text{ kg/m}^3\).", "\(320\\text{ kg/m}^3\)." ], e: "Thể tích: \(V = 2 \\cdot 0,5 \\cdot 0,4 = 0,4\\text{ m}^3\). Khối lượng riêng: \(D = \\frac{320}{0,4} = 800\\text{ kg/m}^3\)." }, { q: "Người ta thường nói \"chì nặng hơn sắt\". Câu nói này mang ý nghĩa vật lí là", a: "khối lượng riêng của chì lớn hơn khối lượng riêng của sắt.", o: [ "khối lượng riêng của chì lớn hơn khối lượng riêng của sắt.", "một cục chì nặng hơn một cục sắt.", "thể tích của chì nhỏ hơn thể tích của sắt.", "chì có độ cứng lớn hơn sắt." ], e: "So sánh sự nặng nhẹ giữa các chất nghĩa là so sánh khối lượng của cùng một đơn vị thể tích, tức so sánh khối lượng riêng." }, { q: "100 mL cồn có khối lượng 79 g. Khối lượng riêng của cồn là", a: "0,79 g/mL.", o: [ "0,79 g/mL.", "790 g/mL.", "7,9 g/mL.", "79 g/mL." ], e: "Áp dụng công thức: \(D = \\frac{m}{V} = \\frac{79}{100} = 0,79\\text{ g/mL}\)." }, { q: "Một bình dung tích 5 lít. Nếu chứa đầy nước (\(D = 1000\\text{ kg/m}^3\)) thì khối lượng nước trong bình là bao nhiêu?", a: "5 kg.", o: [ "5 kg.", "50 kg.", "0,5 kg.", "5000 kg." ], e: "Đổi 5 lít = \(0,005\\text{ m}^3\). Khối lượng: \(m = D \\cdot V = 1000 \\cdot 0,005 = 5\\text{ kg}\)." }, { q: "Đơn vị nào sau đây tương đương với đơn vị \(\\text{g/cm}^3\)?", a: "g/mL", o: [ "g/mL", "kg/m^3", "mg/cm^3", "kg/L" ], e: "Vì \(1\\text{ cm}^3 = 1\\text{ mL}\), nên đơn vị \(\\text{g/cm}^3\) hoàn toàn tương đương với đơn vị \(\\text{g/mL}\)." }, { q: "Hỗn hợp gồm 2 lít nước (\(D = 1000\\text{ kg/m}^3\)) và 3 lít chất lỏng X (\(D = 800\\text{ kg/m}^3\)). Khối lượng của toàn bộ hỗn hợp là", a: "4,4 kg.", o: [ "4,4 kg.", "5 kg.", "4400 kg.", "2,2 kg." ], e: "Khối lượng nước \(m_1 = 1000 \\cdot 0,002 = 2\\text{ kg}\). Khối lượng chất lỏng X \(m_2 = 800 \\cdot 0,003 = 2,4\\text{ kg}\). Tổng khối lượng \(m = 2 + 2,4 = 4,4\\text{ kg}\)." } ], tf: [ { ctx: "Trong một phòng thí nghiệm, học sinh có khối sắt A (\(m = 3,9\\text{ kg}, V = 0,0005\\text{ m}^3\)) và khối nhôm B (\(V = 0,001\\text{ m}^3, D = 2700\\text{ kg/m}^3\)).", sts: [ {l: "a)", t: "Khối lượng riêng của khối sắt A là \(7800\\text{ kg/m}^3\).", a: true}, {l: "b)", t: "Khối lượng của khối nhôm B là 0,27 kg.", a: false}, {l: "c)", t: "Khối lượng riêng của vật đặc trưng cho khối lượng của toàn bộ vật đó.", a: false}, {l: "d)", t: "Nếu cắt khối sắt A thành hai nửa bằng nhau thì khối lượng riêng của mỗi nửa vẫn là \(7800\\text{ kg/m}^3\).", a: true} ], e: "a đúng: \(D_A = 3,9/0,0005 = 7800\\text{ kg/m}^3\). b sai: \(m_B = 2700 \\cdot 0,001 = 2,7\\text{ kg}\). c sai: khối lượng riêng chỉ đặc trưng cho một đơn vị thể tích. d đúng: khối lượng riêng không đổi khi chia nhỏ vật." }, { ctx: "Một học sinh đọc bảng số liệu thấy ghi khối lượng riêng của nước là \(1\\text{ g/cm}^3\) và tiến hành tính toán một số đại lượng.", sts: [ {l: "a)", t: "Đơn vị \(\\text{g/cm}^3\) có thể được viết tương đương là g/mL.", a: true}, {l: "b)", t: "Khối lượng riêng của nước tính theo đơn vị chuẩn SI là \(1000\\text{ kg/m}^3\).", a: true}, {l: "c)", t: "Khối lượng của 500 mL nước nguyên chất là 5 kg.", a: false}, {l: "d)", t: "Công thức liên hệ giữa khối lượng, thể tích và khối lượng riêng là \(V = m \\cdot D\).", a: false} ], e: "a, b đúng vì \(1\\text{ g/cm}^3 = 1\\text{ g/mL} = 1000\\text{ kg/m}^3\). c sai vì \(m = 1 \\cdot 500 = 500\\text{ g} = 0,5\\text{ kg}\). d sai vì công thức đúng là \(V = \\frac{m}{D}\)." }, { ctx: "Hai quả cầu đặc X và Y làm từ hai chất liệu khác nhau. Quả cầu X có thể tích gấp 2 lần quả cầu Y, nhưng khối lượng quả cầu X chỉ bằng một nửa quả cầu Y.", sts: [ {l: "a)", t: "Khối lượng riêng của hai quả cầu là bằng nhau vì khối lượng và thể tích bù trừ cho nhau.", a: false}, {l: "b)", t: "Khối lượng riêng của quả cầu X lớn hơn khối lượng riêng của quả cầu Y.", a: false}, {l: "c)", t: "Tỉ số khối lượng riêng của quả cầu Y so với quả cầu X là 4.", a: true}, {l: "d)", t: "Khối lượng riêng là đại lượng được xác định bằng thương số giữa khối lượng và thể tích của vật.", a: true} ], e: "\(D_X = \\frac{0,5 m_Y}{2 V_Y} = 0,25 D_Y \\Rightarrow \\frac{D_Y}{D_X} = 4\). Do đó a và b sai, c và d đúng." }, { ctx: "Thợ kim hoàn kiểm tra một chiếc nhẫn vàng có khối lượng 19,3 g. Thả nhẫn vào bình chia độ thấy thể tích nước dâng lên là \(1\\text{ cm}^3\).", sts: [ {l: "a)", t: "Thể tích của chiếc nhẫn là \(1\\text{ cm}^3\).", a: true}, {l: "b)", t: "Khối lượng riêng của chất làm chiếc nhẫn là \(19,3\\text{ g/cm}^3\).", a: true}, {l: "c)", t: "Khối lượng riêng của chất làm nhẫn theo đơn vị \(\\text{kg/m}^3\) là \(1930\\text{ kg/m}^3\).", a: false}, {l: "d)", t: "Nếu chiếc nhẫn này rỗng ruột thì khối lượng riêng của lớp vỏ vàng sẽ nhỏ hơn \(19,3\\text{ g/cm}^3\).", a: false} ], e: "a, b đúng: \(D = \\frac{19,3}{1} = 19,3\\text{ g/cm}^3\). c sai vì quy đổi đúng là \(19300\\text{ kg/m}^3\). d sai vì thể tích thực của vàng nhỏ hơn \(1\\text{ cm}^3\) thì \(D\) vỏ vàng phải lớn hơn." }, { ctx: "Bảng khối lượng riêng cho biết: Đá có \(D \\approx 2600\\text{ kg/m}^3\), Chì có \(D = 11300\\text{ kg/m}^3\).", sts: [ {l: "a)", t: "Một mét khối đá có khối lượng khoảng 2600 kg.", a: true}, {l: "b)", t: "Chì nhẹ hơn đá vì nó là kim loại dễ uốn.", a: false}, {l: "c)", t: "Một khối chì 2 kg sẽ có thể tích nhỏ hơn một khối đá 2 kg.", a: true}, {l: "d)", t: "Công thức tính khối lượng m của vật khi biết D và V là \(m = \\frac{D}{V}\).", a: false} ], e: "a đúng theo ý nghĩa khối lượng riêng. b sai vì chì có D lớn hơn nên nặng hơn ở cùng thể tích. c đúng vì \(V = \\frac{m}{D}\), D chì lớn hơn thì V nhỏ hơn. d sai vì \(m = D \\cdot V\)." }, { ctx: "Dùng cân điện tử đo khối lượng ống đong rỗng là 50 g. Rót 100 mL chất lỏng X vào thì khối lượng tổng cộng là 130 g.", sts: [ {l: "a)", t: "Khối lượng của chất lỏng X trong ống đong là 80 g.", a: true}, {l: "b)", t: "Khối lượng riêng của chất lỏng X là 0,8 g/mL.", a: true}, {l: "c)", t: "Khối lượng riêng của chất lỏng X bằng với khối lượng riêng của nước nguyên chất.", a: false}, {l: "d)", t: "Chất lỏng X trong tự nhiên luôn có khối lượng riêng không thay đổi dù ở bất kì nhiệt độ nào.", a: false} ], e: "a, b đúng: \(m = 130 - 50 = 80\\text{ g} \\Rightarrow D = \\frac{80}{100} = 0,8\\text{ g/mL}\). c sai vì nước là \(1\\text{ g/mL}\). d sai vì khối lượng riêng phụ thuộc vào nhiệt độ (nở vì nhiệt)." }, { ctx: "Một xe bồn chở 10000 lít xăng. Biết khối lượng riêng của xăng khoảng \(700\\text{ kg/m}^3\).", sts: [ {l: "a)", t: "Thể tích của lượng xăng trong xe bồn là \(10\\text{ m}^3\).", a: true}, {l: "b)", t: "Khối lượng xăng trong xe bồn là 7000 kg.", a: true}, {l: "c)", t: "Đơn vị \(\\text{kg/m}^3\) và \(\\text{g/cm}^3\) KHÔNG thể dùng chung để đo khối lượng riêng của xăng.", a: false}, {l: "d)", t: "Nếu đổ thêm nước vào xe bồn, khối lượng riêng của xăng sẽ tăng lên bằng nước.", a: false} ], e: "a, b đúng: \(10000\\text{ L} = 10\\text{ m}^3 \\Rightarrow m = 700 \\cdot 10 = 7000\\text{ kg}\). c sai vì cả hai đơn vị đều đo khối lượng riêng và quy đổi được. d sai vì khối lượng riêng đặc trưng cho từng chất độc lập." }, { ctx: "Nghệ nhân dùng hỗn hợp thạch cao và bột đá có khối lượng riêng đông đặc là \(1,2\\text{ g/cm}^3\) đổ đầy khuôn thể tích \(500\\text{ cm}^3\).", sts: [ {l: "a)", t: "Khối lượng của bức tượng sau khi đông đặc là 600 g.", a: true}, {l: "b)", t: "Khối lượng riêng của hỗn hợp thạch cao tính theo đơn vị chuẩn là \(120\\text{ kg/m}^3\).", a: false}, {l: "c)", t: "Công thức tính thể tích khi biết khối lượng và khối lượng riêng là \(V = m \\cdot D\).", a: false}, {l: "d)", t: "Đơn vị \(\\text{g/cm}^3\) là một trong những đơn vị đo khối lượng riêng thường dùng.", a: true} ], e: "a đúng: \(m = 1,2 \\cdot 500 = 600\\text{ g}\). b sai vì \(1,2\\text{ g/cm}^3 = 1200\\text{ kg/m}^3\). c sai vì \(V = \\frac{m}{D}\). d đúng theo SGK." } ], short: [ { q: "Một khối đồng có khối lượng 17,92 kg. Biết khối lượng riêng của đồng là \(8960\\text{ kg/m}^3\). Thể tích của khối đồng này là bao nhiêu \(\\text{dm}^3\)?", a: "2", e: "\(V = \\frac{m}{D} = \\frac{17,92}{8960} = 0,002\\text{ m}^3 = 2\\text{ dm}^3\)." }, { q: "Một vật bằng gang hình hộp chữ nhật có các cạnh 2 cm, 3 cm, 5 cm và khối lượng 210 g. Khối lượng riêng của gang là bao nhiêu \(\\text{g/cm}^3\)?", a: "7", e: "\(V = 2 \\cdot 3 \\cdot 5 = 30\\text{ cm}^3 \\Rightarrow D = \\frac{m}{V} = \\frac{210}{30} = 7\\text{ g/cm}^3\)." }, { q: "Một khối nhôm có khối lượng 54 g. Biết khối lượng riêng của nhôm là \(2,7\\text{ g/cm}^3\). Thể tích của khối nhôm này là bao nhiêu \(\\text{cm}^3\)?", a: "20", e: "\(V = \\frac{m}{D} = \\frac{54}{2,7} = 20\\text{ cm}^3\)." }, { q: "Một chai thuỷ tinh chứa đầy nước (\(D = 1000\\text{ kg/m}^3\)) thì khối lượng nước là 1,5 kg. Nếu chứa đầy dầu ăn (\(D = 800\\text{ kg/m}^3\)) thì khối lượng dầu ăn là bao nhiêu kg?", a: "1,2", e: "\(V = \\frac{1,5}{1000} = 0,0015\\text{ m}^3 \\Rightarrow m_{\\text{dầu}} = 800 \\cdot 0,0015 = 1,2\\text{ kg}\)." }, { q: "Khối lượng riêng của chì là \(11300\\text{ kg/m}^3\). Tính khối lượng của khối chì có thể tích \(0,5\\text{ dm}^3\) theo đơn vị kg.", a: "5,65", e: "Đổi \(0,5\\text{ dm}^3 = 0,0005\\text{ m}^3 \\Rightarrow m = 11300 \\cdot 0,0005 = 5,65\\text{ kg}\)." }, { q: "Một miếng gỗ có khối lượng 240 g và thể tích \(300\\text{ cm}^3\). Khối lượng riêng của gỗ là bao nhiêu \(\\text{g/cm}^3\)?", a: "0,8", e: "\(D = \\frac{m}{V} = \\frac{240}{300} = 0,8\\text{ g/cm}^3\)." }, { q: "Bình chia độ chứa 40 mL nước. Thả chìm viên bi sắt (\(D = 7800\\text{ kg/m}^3\)) mực nước dâng lên 60 mL. Khối lượng của quả cầu sắt là bao nhiêu gam?", a: "156", e: "\(V = 20\\text{ mL} = 20\\text{ cm}^3\). Đổi \(D = 7,8\\text{ g/cm}^3 \\Rightarrow m = 7,8 \\cdot 20 = 156\\text{ g}\)." }, { q: "Pha 0,5 lít rượu (\(D_1 = 800\\text{ kg/m}^3\)) với 0,5 lít nước (\(D_2 = 1000\\text{ kg/m}^3\)). Khối lượng của hỗn hợp thu được là bao nhiêu kg?", a: "0,9", e: "\(m = m_1 + m_2 = 800 \\cdot 0,0005 + 1000 \\cdot 0,0005 = 0,4 + 0,5 = 0,9\\text{ kg}\)." } 
-]
- },
+"bai_13": {
+        mcq: [
+            {
+                q: "Khối lượng riêng của một chất cho ta biết",
+                a: "khối lượng của một đơn vị thể tích chất đó.",
+                o: [
+                    "thể tích của một đơn vị khối lượng chất đó.",
+                    "khối lượng của một đơn vị thể tích chất đó.",
+                    "trọng lượng của một đơn vị thể tích chất đó.",
+                    "khối lượng của vật đó."
+                ],
+                e: "Theo định nghĩa, khối lượng riêng của một chất cho biết khối lượng của một đơn vị thể tích chất đó."
+            },
+            {
+                q: "Đơn vị nào sau đây KHÔNG phải là đơn vị đo khối lượng riêng?",
+                a: "N/m3",
+                o: [
+                    "kg/m3",
+                    "g/cm3",
+                    "g/mL",
+                    "N/m3"
+                ],
+                e: "N/m3 là đơn vị của trọng lượng riêng, không phải khối lượng riêng."
+            },
+            {
+                q: "Công thức tính khối lượng riêng của một chất là",
+                a: "D = m / V",
+                o: [
+                    "D = V / m",
+                    "D = P / V",
+                    "D = m / V",
+                    "m = D / V"
+                ],
+                e: "Khối lượng riêng được xác định bằng thương số giữa khối lượng và thể tích tương ứng: D = m / V."
+            },
+            {
+                q: "Mối liên hệ giữa các đơn vị đo khối lượng riêng nào sau đây là ĐÚNG?",
+                a: "1 g/cm3 = 1000 kg/m3",
+                o: [
+                    "1 kg/m3 = 1000 g/cm3",
+                    "1 g/cm3 = 1000 kg/m3",
+                    "1 g/mL = 1 kg/m3",
+                    "1 kg/m3 = 1 g/cm3"
+                ],
+                e: "1 g/cm3 = 1 g/mL = 1000 kg/m3, do đó cần nhân với 1000 khi chuyển từ g/mL sang kg/m3."
+            },
+            {
+                q: "Một khối sắt có khối lượng 7800 kg và thể tích 1 m3. Khối lượng riêng của sắt là",
+                a: "7800 kg/m3.",
+                o: [
+                    "7800 kg/m3.",
+                    "780 kg/m3.",
+                    "78 kg/m3.",
+                    "7,8 kg/m3."
+                ],
+                e: "Áp dụng công thức D = m / V = 7800 / 1 = 7800 kg/m3."
+            },
+            {
+                q: "Một vật làm bằng nhôm có thể tích 0,002 m3 và khối lượng 5,4 kg. Khối lượng riêng của nhôm là",
+                a: "2700 kg/m3.",
+                o: [
+                    "270 kg/m3.",
+                    "2700 kg/m3.",
+                    "10,8 kg/m3.",
+                    "1080 kg/m3."
+                ],
+                e: "Áp dụng công thức D = m / V = 5,4 / 0,002 = 2700 kg/m3."
+            },
+            {
+                q: "Biết khối lượng riêng của nước là 1000 kg/m3. Khối lượng của 0,5 m3 nước là",
+                a: "500 kg.",
+                o: [
+                    "500 kg.",
+                    "2000 kg.",
+                    "50 kg.",
+                    "5000 kg."
+                ],
+                e: "Từ D = m / V suy ra m = D . V = 1000 . 0,5 = 500 kg."
+            },
+            {
+                q: "Một chai chứa đầy 2 lít dầu ăn. Biết khối lượng riêng của dầu ăn là 800 kg/m3. Khối lượng dầu ăn trong chai là",
+                a: "1,6 kg.",
+                o: [
+                    "1,6 kg.",
+                    "1600 kg.",
+                    "400 kg.",
+                    "0,4 kg."
+                ],
+                e: "Đổi 2 lít = 0,002 m3. Khối lượng dầu ăn: m = D . V = 800 . 0,002 = 1,6 kg."
+            },
+            {
+                q: "Khẳng định nào sau đây là ĐÚNG khi nói về khối lượng riêng của một chất?",
+                a: "Khối lượng riêng của một chất là khối lượng của một đơn vị thể tích chất đó.",
+                o: [
+                    "Khối lượng riêng phụ thuộc vào hình dạng của vật.",
+                    "Khối lượng riêng của một chất là khối lượng của một đơn vị thể tích chất đó.",
+                    "Khi chia đôi vật, khối lượng riêng của vật giảm đi một nửa.",
+                    "Mọi chất đều có cùng một khối lượng riêng."
+                ],
+                e: "Khối lượng riêng đặc trưng cho bản chất của chất làm nên vật thể, không phụ thuộc vào hình dạng hay việc phân chia nhỏ vật."
+            },
+            {
+                q: "Một khối đá có khối lượng 5,2 tấn và khối lượng riêng là 2600 kg/m3. Thể tích của khối đá là",
+                a: "2 m3.",
+                o: [
+                    "2 m3.",
+                    "0,5 m3.",
+                    "20 m3.",
+                    "0,02 m3."
+                ],
+                e: "Đổi 5,2 tấn = 5200 kg. Thể tích khối đá: V = m / D = 5200 / 2600 = 2 m3."
+            },
+            {
+                q: "Để chuyển đổi đơn vị từ g/mL sang kg/m3, ta thực hiện phép tính nào?",
+                a: "Nhân với 1000.",
+                o: [
+                    "Nhân với 1000.",
+                    "Chia cho 1000.",
+                    "Giữ nguyên giá trị.",
+                    "Nhân với 100."
+                ],
+                e: "1 g/mL = 1 g/cm3 = 1000 kg/m3, do đó cần nhân với 1000."
+            },
+            {
+                q: "Khối lượng riêng của đồng là 8900 kg/m3. Một khối đồng có thể tích 10 cm3 sẽ có khối lượng là",
+                a: "89 g.",
+                o: [
+                    "89 g.",
+                    "8,9 g.",
+                    "890 g.",
+                    "0,89 g."
+                ],
+                e: "Đổi 8900 kg/m3 = 8,9 g/cm3. Khối lượng: m = D . V = 8,9 . 10 = 89 g."
+            },
+            {
+                q: "Khi nói \"Khối lượng riêng của nhôm là 2700 kg/m3\", ý nghĩa của câu này là",
+                a: "1 m3 nhôm có khối lượng là 2700 kg.",
+                o: [
+                    "1 m3 nhôm có khối lượng là 2700 kg.",
+                    "1 kg nhôm có thể tích là 2700 m3.",
+                    "2700 m3 nhôm có khối lượng là 1 kg.",
+                    "2700 kg nhôm có trọng lượng là 1 m3."
+                ],
+                e: "Khối lượng riêng biểu thị khối lượng của 1 đơn vị thể tích, do đó 1 m3 nhôm có khối lượng 2700 kg."
+            },
+            {
+                q: "Hai thỏi sắt và nhôm có cùng thể tích. Biết khối lượng riêng của sắt là 7800 kg/m3 và của nhôm là 2700 kg/m3. Khẳng định nào sau đây ĐÚNG?",
+                a: "Thỏi sắt có khối lượng lớn hơn thỏi nhôm.",
+                o: [
+                    "Thỏi sắt có khối lượng lớn hơn thỏi nhôm.",
+                    "Thỏi nhôm có khối lượng lớn hơn thỏi sắt.",
+                    "Hai thỏi có khối lượng bằng nhau.",
+                    "Không thể so sánh được khối lượng của hai thỏi."
+                ],
+                e: "Vì m = D . V, khi có cùng thể tích V thì chất có khối lượng riêng lớn hơn (sắt 7800 > nhôm 2700) sẽ có khối lượng lớn hơn."
+            },
+            {
+                q: "Một bình chia độ chứa 50 mL nước. Thả chìm hoàn toàn một vật rắn không thấm nước vào bình thì mực nước dâng lên đến vạch 80 mL. Cân vật rắn thấy khối lượng là 81 g. Khối lượng riêng của chất làm vật rắn là",
+                a: "2,7 g/cm3.",
+                o: [
+                    "2,7 g/cm3.",
+                    "1,62 g/cm3.",
+                    "1,01 g/cm3.",
+                    "27 g/cm3."
+                ],
+                e: "Thể tích vật V = 80 - 50 = 30 mL = 30 cm3. Khối lượng riêng D = m / V = 81 / 30 = 2,7 g/cm3."
+            },
+            {
+                q: "Trong các yếu tố sau đây, khối lượng riêng của một chất phụ thuộc vào yếu tố nào?",
+                a: "Bản chất của chất đó.",
+                o: [
+                    "Bản chất của chất đó.",
+                    "Khối lượng của vật.",
+                    "Thể tích của vật.",
+                    "Hình dạng của vật."
+                ],
+                e: "Khối lượng riêng là đại lượng đặc trưng riêng cho bản chất của mỗi chất."
+            },
+            {
+                q: "Ba thỏi đồng, sắt, nhôm có cùng khối lượng. Biết khối lượng riêng lần lượt là 8900 kg/m3, 7800 kg/m3, 2700 kg/m3. Thỏi có thể tích lớn nhất là",
+                a: "thỏi nhôm.",
+                o: [
+                    "thỏi nhôm.",
+                    "thỏi sắt.",
+                    "thỏi đồng.",
+                    "ba thỏi có thể tích bằng nhau."
+                ],
+                e: "Từ công thức V = m / D, với cùng khối lượng m, chất nào có khối lượng riêng D nhỏ nhất (nhôm) sẽ có thể tích lớn nhất."
+            },
+            {
+                q: "Kí hiệu của khối lượng riêng trong vật lí là gì?",
+                a: "D",
+                o: [
+                    "D",
+                    "m",
+                    "V",
+                    "d"
+                ],
+                e: "Khối lượng riêng được kí hiệu bằng chữ D (viết tắt từ Density)."
+            },
+            {
+                q: "Một khối gỗ hình hộp chữ nhật có kích thước 2 m, 0,5 m và 0,4 m. Khối lượng của khối gỗ là 320 kg. Khối lượng riêng của khối gỗ là",
+                a: "800 kg/m3.",
+                o: [
+                    "800 kg/m3.",
+                    "80 kg/m3.",
+                    "128 kg/m3.",
+                    "320 kg/m3."
+                ],
+                e: "Thể tích V = 2 . 0,5 . 0,4 = 0,4 m3. Khối lượng riêng: D = m / V = 320 / 0,4 = 800 kg/m3."
+            },
+            {
+                q: "Người ta thường nói \"chì nặng hơn sắt\". Câu nói này mang ý nghĩa vật lí là",
+                a: "khối lượng riêng của chì lớn hơn khối lượng riêng của sắt.",
+                o: [
+                    "khối lượng riêng của chì lớn hơn khối lượng riêng của sắt.",
+                    "một cục chì nặng hơn một cục sắt.",
+                    "thể tích của chì nhỏ hơn thể tích của sắt.",
+                    "chì có độ cứng lớn hơn sắt."
+                ],
+                e: "Nói chì nặng hơn sắt nghĩa là so sánh khối lượng của cùng một đơn vị thể tích, tức là so sánh khối lượng riêng."
+            },
+            {
+                q: "100 mL cồn có khối lượng 79 g. Khối lượng riêng của cồn là",
+                a: "0,79 g/mL.",
+                o: [
+                    "0,79 g/mL.",
+                    "790 g/mL.",
+                    "7,9 g/mL.",
+                    "79 g/mL."
+                ],
+                e: "Áp dụng công thức: D = m / V = 79 / 100 = 0,79 g/mL."
+            },
+            {
+                q: "Một bình dung tích 5 lít. Nếu chứa đầy nước (D = 1000 kg/m3) thì khối lượng nước trong bình là bao nhiêu?",
+                a: "5 kg.",
+                o: [
+                    "5 kg.",
+                    "50 kg.",
+                    "0,5 kg.",
+                    "5000 kg."
+                ],
+                e: "Đổi 5 lít = 0,005 m3. Khối lượng: m = D . V = 1000 . 0,005 = 5 kg."
+            },
+            {
+                q: "Đơn vị nào sau đây tương đương với đơn vị g/cm3?",
+                a: "g/mL",
+                o: [
+                    "g/mL",
+                    "kg/m3",
+                    "mg/cm3",
+                    "kg/L"
+                ],
+                e: "Vì 1 cm3 tương đương với 1 mL nên g/cm3 hoàn toàn tương đương với g/mL."
+            },
+            {
+                q: "Hỗn hợp gồm 2 lít nước (D = 1000 kg/m3) và 3 lít chất lỏng X (D = 800 kg/m3). Khối lượng của toàn bộ hỗn hợp là",
+                a: "4,4 kg.",
+                o: [
+                    "4,4 kg.",
+                    "5 kg.",
+                    "4400 kg.",
+                    "2,2 kg."
+                ],
+                e: "Khối lượng nước m1 = 1000 . 0,002 = 2 kg. Khối lượng chất lỏng X: m2 = 800 . 0,003 = 2,4 kg. Tổng khối lượng m = 2 + 2,4 = 4,4 kg."
+            }
+        ],
+        tf: [
+            {
+                ctx: "Trong một phòng thí nghiệm, học sinh có khối sắt A (m = 3,9 kg; V = 0,0005 m3) và khối nhôm B (V = 0,001 m3; D = 2700 kg/m3).",
+                sts: [
+                    {l: "a)", t: "Khối lượng riêng của khối sắt A là 7800 kg/m3.", a: true},
+                    {l: "b)", t: "Khối lượng của khối nhôm B là 0,27 kg.", a: false},
+                    {l: "c)", t: "Khối lượng riêng của vật đặc trưng cho khối lượng của toàn bộ vật đó.", a: false},
+                    {l: "d)", t: "Nếu cắt khối sắt A thành hai nửa bằng nhau thì khối lượng riêng của mỗi nửa vẫn là 7800 kg/m3.", a: true}
+                ],
+                e: "a đúng vì D = 3,9 / 0,0005 = 7800 kg/m3. b sai vì m = 2700 . 0,001 = 2,7 kg. c sai vì khối lượng riêng chỉ đặc trưng cho một đơn vị thể tích. d đúng vì khối lượng riêng không thay đổi khi phân chia vật."
+            },
+            {
+                ctx: "Một học sinh đọc bảng số liệu thấy ghi khối lượng riêng của nước là 1 g/cm3 và tiến hành tính toán một số đại lượng.",
+                sts: [
+                    {l: "a)", t: "Đơn vị g/cm3 có thể được viết tương đương là g/mL.", a: true},
+                    {l: "b)", t: "Khối lượng riêng của nước tính theo đơn vị chuẩn SI là 1000 kg/m3.", a: true},
+                    {l: "c)", t: "Khối lượng của 500 mL nước nguyên chất là 5 kg.", a: false},
+                    {l: "d)", t: "Công thức liên hệ giữa khối lượng, thể tích và khối lượng riêng là V = m . D.", a: false}
+                ],
+                e: "a, b đúng: 1 g/cm3 = 1 g/mL = 1000 kg/m3. c sai vì m = 1 . 500 = 500 g = 0,5 kg. d sai vì công thức đúng là V = m / D."
+            },
+            {
+                ctx: "Hai quả cầu đặc X và Y làm từ hai chất liệu khác nhau. Quả cầu X có thể tích gấp 2 lần quả cầu Y, nhưng khối lượng quả cầu X chỉ bằng một nửa quả cầu Y.",
+                sts: [
+                    {l: "a)", t: "Khối lượng riêng của hai quả cầu là bằng nhau vì khối lượng và thể tích bù trừ cho nhau.", a: false},
+                    {l: "b)", t: "Khối lượng riêng của quả cầu X lớn hơn khối lượng riêng của quả cầu Y.", a: false},
+                    {l: "c)", t: "Tỉ số khối lượng riêng của quả cầu Y so với quả cầu X là 4.", a: true},
+                    {l: "d)", t: "Khối lượng riêng là đại lượng được xác định bằng thương số giữa khối lượng và thể tích của vật.", a: true}
+                ],
+                e: "D_X = (0,5 m_Y) / (2 V_Y) = 0,25 D_Y -> D_Y / D_X = 4. Do đó a và b sai, c và d đúng."
+            },
+            {
+                ctx: "Thợ kim hoàn kiểm tra một chiếc nhẫn vàng có khối lượng 19,3 g. Thả nhẫn vào bình chia độ thấy thể tích nước dâng lên là 1 cm3.",
+                sts: [
+                    {l: "a)", t: "Thể tích của chiếc nhẫn là 1 cm3.", a: true},
+                    {l: "b)", t: "Khối lượng riêng của chất làm chiếc nhẫn là 19,3 g/cm3.", a: true},
+                    {l: "c)", t: "Khối lượng riêng của chất làm nhẫn theo đơn vị kg/m3 là 1930 kg/m3.", a: false},
+                    {l: "d)", t: "Nếu chiếc nhẫn này rỗng ruột thì khối lượng riêng của lớp vỏ vàng sẽ nhỏ hơn 19,3 g/cm3.", a: false}
+                ],
+                e: "a, b đúng: D = 19,3 / 1 = 19,3 g/cm3. c sai vì đổi sang kg/m3 phải nhân 1000 = 19300 kg/m3. d sai vì thể tích thực của vàng nhỏ hơn 1 cm3 nên D thực tế của vỏ vàng phải lớn hơn."
+            },
+            {
+                ctx: "Bảng khối lượng riêng cho biết: Đá có D ≈ 2600 kg/m3, Chì có D = 11300 kg/m3.",
+                sts: [
+                    {l: "a)", t: "Một mét khối đá có khối lượng khoảng 2600 kg.", a: true},
+                    {l: "b)", t: "Chì nhẹ hơn đá vì nó là kim loại dễ uốn.", a: false},
+                    {l: "c)", t: "Một khối chì 2 kg sẽ có thể tích nhỏ hơn một khối đá 2 kg.", a: true},
+                    {l: "d)", t: "Công thức tính khối lượng m của vật khi biết D và V là m = D / V.", a: false}
+                ],
+                e: "a đúng theo ý nghĩa khối lượng riêng. b sai vì chì có khối lượng riêng lớn hơn nên nặng hơn đá ở cùng thể tích. c đúng vì V = m / D, D chì lớn hơn nên V nhỏ hơn. d sai vì m = D . V."
+            },
+            {
+                ctx: "Dùng cân điện tử đo khối lượng ống đong rỗng là 50 g. Rót 100 mL chất lỏng X vào thì khối lượng tổng cộng là 130 g.",
+                sts: [
+                    {l: "a)", t: "Khối lượng của chất lỏng X trong ống đong là 80 g.", a: true},
+                    {l: "b)", t: "Khối lượng riêng của chất lỏng X là 0,8 g/mL.", a: true},
+                    {l: "c)", t: "Khối lượng riêng của chất lỏng X bằng với khối lượng riêng của nước nguyên chất.", a: false},
+                    {l: "d)", t: "Chất lỏng X trong tự nhiên luôn có khối lượng riêng không thay đổi dù ở bất kì nhiệt độ nào.", a: false}
+                ],
+                e: "a, b đúng: m = 130 - 50 = 80 g -> D = 80 / 100 = 0,8 g/mL. c sai vì nước có D = 1 g/mL. d sai vì chất lỏng dãn nở vì nhiệt làm D thay đổi theo nhiệt độ."
+            },
+            {
+                ctx: "Một xe bồn chở 10000 lít xăng. Biết khối lượng riêng của xăng khoảng 700 kg/m3.",
+                sts: [
+                    {l: "a)", t: "Thể tích của lượng xăng trong xe bồn là 10 m3.", a: true},
+                    {l: "b)", t: "Khối lượng xăng trong xe bồn là 7000 kg.", a: true},
+                    {l: "c)", t: "Đơn vị kg/m3 và g/cm3 KHÔNG thể dùng chung để đo khối lượng riêng của xăng.", a: false},
+                    {l: "d)", t: "Nếu đổ thêm nước vào xe bồn, khối lượng riêng của xăng sẽ tăng lên bằng nước.", a: false}
+                ],
+                e: "a, b đúng: 10000 lít = 10 m3 -> m = 700 . 10 = 7000 kg. c sai vì cả hai đơn vị đều đo khối lượng riêng. d sai vì xăng không tan trong nước và khối lượng riêng là đặc trưng của mỗi chất."
+            },
+            {
+                ctx: "Nghệ nhân dùng hỗn hợp thạch cao và bột đá có khối lượng riêng đông đặc là 1,2 g/cm3 đổ đầy khuôn thể tích 500 cm3.",
+                sts: [
+                    {l: "a)", t: "Khối lượng của bức tượng sau khi đông đặc là 600 g.", a: true},
+                    {l: "b)", t: "Khối lượng riêng của hỗn hợp thạch cao tính theo đơn vị chuẩn là 120 kg/m3.", a: false},
+                    {l: "c)", t: "Công thức tính thể tích khi biết khối lượng và khối lượng riêng là V = m . D.", a: false},
+                    {l: "d)", t: "Đơn vị g/cm3 là một trong những đơn vị đo khối lượng riêng thường dùng.", a: true}
+                ],
+                e: "a đúng: m = 1,2 . 500 = 600 g. b sai vì 1,2 g/cm3 = 1200 kg/m3. c sai vì V = m / D. d đúng theo SGK."
+            }
+        ],
+        short: [
+            {
+                q: "Một khối đồng có khối lượng 17,92 kg. Biết khối lượng riêng của đồng là 8960 kg/m3. Thể tích của khối đồng này là bao nhiêu dm3?",
+                a: "2",
+                e: "V = m / D = 17,92 / 8960 = 0,002 m3 = 2 dm3."
+            },
+            {
+                q: "Một vật bằng gang hình hộp chữ nhật có các cạnh 2 cm, 3 cm, 5 cm và khối lượng 210 g. Khối lượng riêng của gang là bao nhiêu g/cm3?",
+                a: "7",
+                e: "V = 2 . 3 . 5 = 30 cm3 -> D = m / V = 210 / 30 = 7 g/cm3."
+            },
+            {
+                q: "Một khối nhôm có khối lượng 54 g. Biết khối lượng riêng của nhôm là 2,7 g/cm3. Thể tích của khối nhôm này là bao nhiêu cm3?",
+                a: "20",
+                e: "V = m / D = 54 / 2,7 = 20 cm3."
+            },
+            {
+                q: "Một chai thuỷ tinh chứa đầy nước (D = 1000 kg/m3) thì khối lượng nước là 1,5 kg. Nếu chứa đầy dầu ăn (D = 800 kg/m3) thì khối lượng dầu ăn là bao nhiêu kg?",
+                a: "1,2",
+                e: "V = 1,5 / 1000 = 0,0015 m3 -> m(dầu) = 800 . 0,0015 = 1,2 kg."
+            },
+            {
+                q: "Khối lượng riêng của chì là 11300 kg/m3. Tính khối lượng của khối chì có thể tích 0,5 dm3 theo đơn vị kg.",
+                a: "5,65",
+                e: "Đổi 0,5 dm3 = 0,0005 m3 -> m = 11300 . 0,0005 = 5,65 kg."
+            },
+            {
+                q: "Một miếng gỗ có khối lượng 240 g và thể tích 300 cm3. Khối lượng riêng của gỗ là bao nhiêu g/cm3?",
+                a: "0,8",
+                e: "D = m / V = 240 / 300 = 0,8 g/cm3."
+            },
+            {
+                q: "Bình chia độ chứa 40 mL nước. Thả chìm viên bi sắt (D = 7800 kg/m3) mực nước dâng lên 60 mL. Khối lượng của quả cầu sắt là bao nhiêu gam?",
+                a: "156",
+                e: "V = 60 - 40 = 20 mL = 20 cm3. Đổi D = 7,8 g/cm3 -> m = 7,8 . 20 = 156 g."
+            },
+            {
+                q: "Pha 0,5 lít rượu (D1 = 800 kg/m3) với 0,5 lít nước (D2 = 1000 kg/m3). Khối lượng của hỗn hợp thu được là bao nhiêu kg?",
+                a: "0,9",
+                e: "m = (800 . 0,0005) + (1000 . 0,0005) = 0,4 + 0,5 = 0,9 kg."
+            }
+        ]
+    },
 "bai_14": { mcq: [ { q: "Trong bài thực hành xác định khối lượng riêng, dụng cụ nào sau đây KHÔNG được sử dụng để đo thể tích?", a: "Cân điện tử.", o: [ "Cân điện tử.", "Ống đong.", "Bình chia độ.", "Thước thẳng." ], e: "Cân điện tử dùng để đo khối lượng, không dùng để đo thể tích." }, { q: "Công thức dùng để tính khối lượng riêng của một chất là", a: "\(D = \\frac{m}{V}\)", o: [ "\(D = m \\cdot V\)", "\(D = \\frac{m}{V}\)", "\(D = \\frac{V}{m}\)", "\(m = D \\cdot V^2\)" ], e: "Khối lượng riêng được tính bằng thương số giữa khối lượng và thể tích của vật: \(D = \\frac{m}{V}\)." }, { q: "Để xác định thể tích của một khối gỗ hình hộp chữ nhật, ta sử dụng dụng cụ nào và thực hiện phép tính gì?", a: "Dùng thước thẳng đo chiều dài ba cạnh a, b, c và tính \(V = a \\cdot b \\cdot c\).", o: [ "Dùng bình chia độ để đo trực tiếp thể tích.", "Dùng thước thẳng đo chiều dài ba cạnh a, b, c và tính \(V = a \\cdot b \\cdot c\).", "Dùng thước thẳng đo chiều dài ba cạnh a, b, c và tính \(V = a + b + c\).", "Dùng cân điện tử để đo thể tích." ], e: "Khối hộp chữ nhật có thể tích bằng tích ba kích thước đo được bằng thước: \(V = a \\cdot b \\cdot c\)." }, { q: "Khi tiến hành đo thể tích và khối lượng trong bài thực hành, học sinh được yêu cầu đo 3 lần rồi lấy giá trị trung bình. Mục đích của việc làm này là gì?", a: "Để giảm thiểu sai số trong quá trình đo đạc.", o: [ "Để làm quen với các dụng cụ đo.", "Để giảm thiểu sai số trong quá trình đo đạc.", "Để chứng minh thiết bị đo không chính xác.", "Để có đủ số liệu điền vào bảng báo cáo." ], e: "Đo nhiều lần và tính giá trị trung bình giúp giảm thiểu các sai số ngẫu nhiên." }, { q: "Một học sinh dùng thước đo được các cạnh của một khối gỗ hình hộp chữ nhật là a = 4 cm, b = 5 cm, c = 2 cm. Thể tích của khối gỗ đó là", a: "\(40\\text{ cm}^3\).", o: [ "\(40\\text{ cm}^3\).", "\(11\\text{ cm}^3\).", "\(20\\text{ cm}^3\).", "\(80\\text{ cm}^3\)." ], e: "Thể tích khối hộp chữ nhật: \(V = a \\cdot b \\cdot c = 4 \\cdot 5 \\cdot 2 = 40\\text{ cm}^3\)." }, { q: "Một khối sắt hình hộp chữ nhật có khối lượng 312 g và có thể tích là \(40\\text{ cm}^3\). Khối lượng riêng của khối sắt đó là", a: "\(7,8\\text{ g/cm}^3\).", o: [ "\(7800\\text{ g/cm}^3\).", "\(7,8\\text{ g/cm}^3\).", "\(0,128\\text{ g/cm}^3\).", "\(12480\\text{ g/cm}^3\)." ], e: "Áp dụng công thức: \(D = \\frac{m}{V} = \\frac{312}{40} = 7,8\\text{ g/cm}^3\)." }, { q: "Khi đo khối lượng của một lượng chất lỏng, gọi \(m_1\) là khối lượng ống đong rỗng, \(m_2\) là khối lượng ống đong chứa chất lỏng. Công thức tính khối lượng m của chất lỏng là", a: "\(m = m_2 - m_1\)", o: [ "\(m = m_1 + m_2\)", "\(m = m_1 - m_2\)", "\(m = m_2 - m_1\)", "\(m = \\frac{m_2}{m_1}\)" ], e: "Khối lượng chất lỏng bằng khối lượng tổng trừ đi khối lượng ống đong rỗng (trừ bì): \(m = m_2 - m_1\)." }, { q: "Trình tự nào sau đây là ĐÚNG khi thực hành xác định khối lượng riêng của một lượng nước?", a: "Đo khối lượng ống đong rỗng \(\\rightarrow\) rót nước vào đo thể tích \(\\rightarrow\) đo khối lượng ống đong chứa nước \(\\rightarrow\) tính khối lượng riêng.", o: [ "Đo khối lượng ống đong rỗng \(\\rightarrow\) rót nước vào đo thể tích \(\\rightarrow\) đo khối lượng ống đong chứa nước \(\\rightarrow\) tính khối lượng riêng.", "Rót nước vào đo thể tích \(\\rightarrow\) đo khối lượng ống đong chứa nước \(\\rightarrow\) đo khối lượng ống đong rỗng \(\\rightarrow\) tính khối lượng riêng.", "Đo khối lượng ống đong chứa nước \(\\rightarrow\) rót nước ra đo thể tích \(\\rightarrow\) tính khối lượng riêng.", "Đo khối lượng ống đong rỗng \(\\rightarrow\) đo khối lượng ống đong chứa nước \(\\rightarrow\) rót nước vào đo thể tích \(\\rightarrow\) tính khối lượng riêng." ], e: "Trình tự chuẩn: cân bình rỗng (\(m_1\)), rót nước đọc thể tích (\(V\)), cân bình chứa nước (\(m_2\)), tính \(m = m_2 - m_1\) rồi tính \(D\)." }, { q: "Cân ống đong rỗng được 50 g. Rót vào ống đong 100 mL chất lỏng X rồi đặt lên cân, cân chỉ 130 g. Khối lượng riêng của chất lỏng X là", a: "\(0,8\\text{ g/mL}\).", o: [ "\(1,3\\text{ g/mL}\).", "\(0,8\\text{ g/mL}\).", "\(1,8\\text{ g/mL}\).", "\(80\\text{ g/mL}\)." ], e: "Khối lượng chất lỏng: \(m = 130 - 50 = 80\\text{ g}\). Khối lượng riêng: \(D = \\frac{80}{100} = 0,8\\text{ g/mL}\)." }, { q: "Khi sử dụng bình chia độ để đo thể tích hòn sỏi, hòn sỏi cần thỏa mãn điều kiện nào sau đây để kết quả đo chính xác nhất?", a: "Hòn sỏi phải chìm hoàn toàn và không thấm nước.", o: [ "Hòn sỏi phải nổi trên mặt nước.", "Hòn sỏi phải thấm nước.", "Hòn sỏi phải chìm hoàn toàn và không thấm nước.", "Hòn sỏi phải có thể tích lớn hơn thể tích bình chia độ." ], e: "Vật cần chìm hoàn toàn để chiếm chỗ lượng nước đúng bằng thể tích của nó và không thấm nước để tránh làm hao hụt thể tích nước." }, { q: "Khi đo thể tích hòn sỏi bằng bình chia độ, gọi \(V_1\) là thể tích nước ban đầu, \(V_2\) là thể tích nước sau khi thả chìm hòn sỏi. Công thức tính thể tích của hòn sỏi là", a: "\(V = V_2 - V_1\)", o: [ "\(V = V_1 + V_2\)", "\(V = V_1 - V_2\)", "\(V = \\frac{V_1 + V_2}{2}\)", "\(V = V_2 - V_1\)" ], e: "Thể tích hòn sỏi bằng thể tích nước dâng lên: \(V = V_2 - V_1\)." }, { q: "Đặt hòn sỏi lên cân điện tử, cân chỉ 54 g. Rót nước vào ống đong đến vạch 40 mL, thả chìm hòn sỏi vào thì nước dâng lên đến vạch 60 mL. Khối lượng riêng của hòn sỏi là", a: "\(2,7\\text{ g/cm}^3\).", o: [ "\(1,35\\text{ g/cm}^3\).", "\(0,9\\text{ g/cm}^3\).", "\(2,7\\text{ g/cm}^3\).", "\(27\\text{ g/cm}^3\)." ], e: "\(V = 60 - 40 = 20\\text{ mL} = 20\\text{ cm}^3\). Khối lượng riêng: \(D = \\frac{54}{20} = 2,7\\text{ g/cm}^3\)." }, { q: "Trong quy trình đo thể tích hòn sỏi, người ta dùng một sợi chỉ buộc vào hòn sỏi để thả từ từ xuống nước. Hành động này có tác dụng chính là gì?", a: "Tránh làm nước bắn ra ngoài và không làm vỡ đáy ống đong.", o: [ "Để hòn sỏi thấm nước từ từ.", "Tránh làm nước bắn ra ngoài và không làm vỡ đáy ống đong.", "Để tăng thêm khối lượng cho hòn sỏi.", "Để hòn sỏi không chạm vào thành bình." ], e: "Thả từ từ bằng chỉ giúp tránh nước bắn ra ngoài gây hao hụt thể tích và bảo vệ đáy bình thủy tinh." }, { q: "Nếu học sinh thả hòn sỏi vào bình chia độ trước rồi mới vớt ra để đem đi cân khối lượng, thao tác này sẽ dẫn đến kết quả khối lượng riêng bị ảnh hưởng như thế nào?", a: "Khối lượng đo được lớn hơn thực tế, làm khối lượng riêng tính ra lớn hơn.", o: [ "Khối lượng đo được nhỏ hơn thực tế, làm khối lượng riêng tính ra nhỏ hơn.", "Khối lượng đo được lớn hơn thực tế, làm khối lượng riêng tính ra lớn hơn.", "Thể tích đo được nhỏ hơn thực tế, làm khối lượng riêng tính ra lớn hơn.", "Kết quả không bị ảnh hưởng vì hòn sỏi không thấm nước." ], e: "Nước bám dính trên bề mặt hòn sỏi làm khối lượng cân được lớn hơn thực tế, dẫn tới \(D\) tính ra lớn hơn (\(D = \\frac{m}{V}\))." }, { q: "Trên cân điện tử trong phòng thí nghiệm thường có nút \"TARE\" (hoặc \"ZERO\"). Nút này có chức năng chính là gì?", a: "Trừ bì (đưa số chỉ của cân về 0).", o: [ "Thay đổi đơn vị đo từ gam sang kilôgam.", "Trừ bì (đưa số chỉ của cân về 0).", "Tắt nguồn điện của cân.", "Tính tự động khối lượng riêng của vật." ], e: "Nút TARE/ZERO dùng để trừ khối lượng vật chứa (trừ bì) và đưa số chỉ về 0." }, { q: "Khi lặp lại thí nghiệm đo khối lượng riêng của nước 3 lần, thu được các giá trị lần lượt là \(0,98\\text{ g/cm}^3\), \(1,00\\text{ g/cm}^3\), \(1,02\\text{ g/cm}^3\). Giá trị trung bình là", a: "\(1,00\\text{ g/cm}^3\).", o: [ "\(0,99\\text{ g/cm}^3\).", "\(1,01\\text{ g/cm}^3\).", "\(1,00\\text{ g/cm}^3\).", "\(3,00\\text{ g/cm}^3\)." ], e: "Giá trị trung bình: \(\\bar{D} = \\frac{0,98 + 1,00 + 1,02}{3} = 1,00\\text{ g/cm}^3\)." }, { q: "Khi đọc kết quả thể tích chất lỏng trên ống đong, mắt người quan sát phải đặt ở vị trí nào là chuẩn xác nhất?", a: "Đặt mắt ngang bằng với điểm thấp nhất của mặt lõm chất lỏng.", o: [ "Nhìn từ trên cao xuống mặt thoáng của chất lỏng.", "Nhìn từ dưới đáy ống đong lên mặt thoáng của chất lỏng.", "Đặt mắt ngang bằng với điểm thấp nhất của mặt lõm chất lỏng.", "Đặt mắt ngang bằng với mép nước bám trên thành ống đong." ], e: "Quy tắc đọc thể tích chất lỏng làm ướt thành bình là đặt mắt nhìn ngang với đáy mặt lõm của mặt thoáng." }, { q: "Bảng kết quả thí nghiệm đo khối lượng hòn sỏi ghi: \(m_1 = 54,2\\text{ g}\); \(m_2 = 54,0\\text{ g}\); \(m_3 = 53,8\\text{ g}\). Khối lượng trung bình \(\\bar{m}\) của hòn sỏi là", a: "54,0 g.", o: [ "54,2 g.", "54,0 g.", "53,9 g.", "54,1 g." ], e: "Khối lượng trung bình: \(\\bar{m} = \\frac{54,2 + 54,0 + 53,8}{3} = 54,0\\text{ g}\)." }, { q: "Đơn vị mL thường ghi trên bình chia độ và ống đong có giá trị tương đương với đơn vị thể tích nào sau đây?", a: "\(\\text{cm}^3\)", o: [ "\(\\text{m}^3\)", "\(\\text{dm}^3\)", "\(\\text{cm}^3\)", "\(\\text{mm}^3\)" ], e: "\(1\\text{ mL} = 1\\text{ cm}^3\)." }, { q: "Trong thí nghiệm xác định khối lượng riêng của chất lỏng, nếu tăng thể tích chất lỏng rót vào bình chia độ lên gấp đôi thì khối lượng riêng của nó sẽ", a: "Không thay đổi.", o: [ "Tăng lên gấp đôi.", "Giảm đi một nửa.", "Không thay đổi.", "Tăng lên gấp 4 lần." ], e: "Khối lượng riêng đặc trưng cho bản chất của chất; khi \(V\) tăng gấp đôi thì \(m\) cũng tăng gấp đôi, tỉ số \(D = \\frac{m}{V}\) không đổi." }, { q: "Học sinh đo khối lượng riêng của chất lỏng được \(800\\text{ kg/m}^3\). Chất lỏng đó nhiều khả năng nhất là chất nào? (Biết \(D_{\\text{nước}} = 1000\\text{ kg/m}^3\), \(D_{\\text{dầu ăn}} = 800\\text{ kg/m}^3\), \(D_{\\text{cồn}} = 790\\text{ kg/m}^3\)).", a: "Dầu ăn.", o: [ "Nước nguyên chất.", "Dầu ăn.", "Cồn (rượu).", "Thuỷ ngân." ], e: "Giá trị đo được \(800\\text{ kg/m}^3\) tương ứng với khối lượng riêng của dầu ăn." }, { q: "Việc thấm khô hòn sỏi bằng giấy mềm sau mỗi lần nhúng vào nước trước khi lặp lại thí nghiệm đo nhằm mục đích gì?", a: "Không làm thay đổi khối lượng thực tế của hòn sỏi trong các lần đo sau.", o: [ "Giữ cho hòn sỏi luôn bóng đẹp.", "Không làm thay đổi khối lượng thực tế của hòn sỏi trong các lần đo sau.", "Tránh làm hòn sỏi bị tan ra trong nước.", "Tăng cường lực đẩy Archimedes lên hòn sỏi." ], e: "Lau khô sỏi để nước đọng không làm tăng khối lượng biểu kiến của hòn sỏi ở các lần đo lặp lại." }, { q: "Hai khối gỗ cùng loại: khối 1 có khối lượng m, thể tích V; khối 2 có khối lượng 2m. Thể tích của khối thứ hai là", a: "2V", o: [ "V", "0,5V", "2V", "4V" ], e: "Cùng chất liệu thì \(D\) không đổi, \(V = \\frac{m}{D}\) nên khối lượng tăng gấp đôi thì thể tích cũng tăng gấp đôi ($2V$)." }, { q: "Khối lượng riêng của nhôm là \(2700\\text{ kg/m}^3\). Khi thực hành với khối nhôm có thể tích \(10\\text{ cm}^3\), khối lượng đo được trên cân phải là", a: "27 g.", o: [ "270 g.", "27 g.", "2,7 g.", "0,27 g." ], e: "Đổi \(2700\\text{ kg/m}^3 = 2,7\\text{ g/cm}^3\). Khối lượng: \(m = D \\cdot V = 2,7 \\cdot 10 = 27\\text{ g}\)." } ], tf: [ { ctx: "Học sinh thực hành xác định khối lượng riêng của một khối gỗ hình hộp chữ nhật.", sts: [ {l: "a)", t: "Dùng thước thẳng đo các kích thước chiều dài, chiều rộng, chiều cao của khối gỗ là bước cần thiết.", a: true}, {l: "b)", t: "Thể tích khối gỗ được tính bằng công thức \(V = a + b + c\).", a: false}, {l: "c)", t: "Khối lượng của khối gỗ được xác định bằng cân điện tử.", a: true}, {l: "d)", t: "Công thức tính khối lượng riêng của khối gỗ là \(D = \\frac{V}{m}\).", a: false} ], e: "a, c đúng vì dùng thước đo kích thước và cân đo khối lượng. b sai vì \(V = a \\cdot b \\cdot c\). d sai vì \(D = \\frac{m}{V}\)." }, { ctx: "Khi tiến hành xác định khối lượng riêng của một lượng nước tinh khiết trong phòng thí nghiệm.", sts: [ {l: "a)", t: "Việc xác định khối lượng của ống đong rỗng trước khi rót nước vào là một thao tác cần thiết.", a: true}, {l: "b)", t: "Khối lượng của lượng nước cần đo chính là số chỉ trên cân khi đặt ống đong đã chứa nước lên bàn cân.", a: false}, {l: "c)", t: "Thể tích của nước được đọc trực tiếp từ vạch chia trên ống đong.", a: true}, {l: "d)", t: "Khối lượng riêng của nước là một đại lượng không đổi và không phụ thuộc vào lượng nước đem đo.", a: true} ], e: "a, c, d đúng. b sai vì số chỉ cân là khối lượng tổng, phải trừ khối lượng ống đong rỗng mới ra khối lượng nước." }, { ctx: "Thực hiện thí nghiệm xác định khối lượng riêng của một hòn sỏi bằng bình chia độ và cân điện tử.", sts: [ {l: "a)", t: "Hòn sỏi đem đo cần thoả mãn điều kiện chìm trong nước và không thấm nước.", a: true}, {l: "b)", t: "Thể tích của hòn sỏi bằng đúng thể tích nước đọc được ở vạch chia sau khi thả hòn sỏi vào.", a: false}, {l: "c)", t: "Cần dùng sợi chỉ buộc vào hòn sỏi để thả từ từ xuống nước, tránh làm vỡ đáy bình và nước bắn ra ngoài.", a: true}, {l: "d)", t: "Nếu hòn sỏi nổi lơ lửng trên mặt nước, ta vẫn có thể dùng phương pháp đo dâng nước thông thường này.", a: false} ], e: "a, c đúng theo nguyên tắc đo dâng nước. b sai vì thể tích sỏi \(V = V_2 - V_1\). d sai vì vật nổi không chiếm chỗ toàn bộ thể tích." }, { ctx: "Khi phân tích các sai số trong quá trình thực hành đo khối lượng riêng của vật thể.", sts: [ {l: "a)", t: "Việc đặt mắt nhìn từ trên cao xuống để đọc thể tích nước trong ống đong sẽ gây ra sai số.", a: true}, {l: "b)", t: "Cần đưa số chỉ của cân điện tử về 0 trước khi đặt vật lên đĩa cân để có kết quả khối lượng đúng.", a: true}, {l: "c)", t: "Trong thực hành vật lí, chỉ cần đo 1 lần duy nhất là kết quả luôn chính xác tuyệt đối.", a: false}, {l: "d)", t: "Nếu nhúng ướt hòn sỏi rồi mới đặt lên cân, kết quả tính toán khối lượng riêng sẽ bị lớn hơn so với thực tế.", a: true} ], e: "a, b, d đúng. c sai vì luôn cần đo lặp lại nhiều lần để lấy giá trị trung bình nhằm giảm thiểu sai số." }, { ctx: "Một học sinh tính toán số liệu từ khối hộp chữ nhật bằng nhôm có các kích thước \(4\\text{ cm} \\times 5\\text{ cm} \\times 2\\text{ cm}\).", sts: [ {l: "a)", t: "Thể tích của khối nhôm này là \(40\\text{ cm}^3\).", a: true}, {l: "b)", t: "Nếu khối lượng khối nhôm cân được là 108 g thì khối lượng riêng là \(2,7\\text{ g/cm}^3\).", a: true}, {l: "c)", t: "Khối lượng riêng vừa tính được là đại lượng đặc trưng cho chất làm khối hộp đó (nhôm).", a: true}, {l: "d)", t: "Nếu cưa đôi khối hộp này, khối lượng riêng của mỗi nửa khối hộp sẽ giảm đi một nửa.", a: false} ], e: "a, b, c đúng (\(V = 40\\text{ cm}^3, D = 108/40 = 2,7\\text{ g/cm}^3\)). d sai vì khối lượng riêng của chất không đổi khi chia nhỏ." }, { ctx: "Bảng số liệu khi đo chất lỏng X: Khối lượng ống đong rỗng \(m_1 = 50\\text{ g}\), khối lượng ống đong chứa chất lỏng \(m_2 = 130\\text{ g}\), thể tích chất lỏng \(V = 100\\text{ mL}\).", sts: [ {l: "a)", t: "Khối lượng của lượng chất lỏng X đem đo là 40 g.", a: false}, {l: "b)", t: "Khối lượng riêng của chất lỏng X là \(0,8\\text{ g/cm}^3\).", a: true}, {l: "c)", t: "Đơn vị 1 mL trên ống đong tương đương với thể tích \(1\\text{ cm}^3\).", a: true}, {l: "d)", t: "Chất lỏng X nặng hơn nước nguyên chất (biết \(D_{\\text{nước}} = 1,0\\text{ g/cm}^3\)).", a: false} ], e: "a sai vì \(m = 130 - 50 = 80\\text{ g}\). b, c đúng: \(D = 80/100 = 0,8\\text{ g/cm}^3\). d sai vì \(0,8 < 1,0\) nên chất lỏng X nhẹ hơn nước." }, { ctx: "Về quy tắc thực hành và đơn vị đo đạc trong bài thực hành khối lượng riêng.", sts: [ {l: "a)", t: "Cần lau khô hòn sỏi trước khi đo lại thể tích ở các lần lặp lại để hạn chế sai số.", a: true}, {l: "b)", t: "Nếu trong quá trình thả sỏi vào bình chia độ làm nước bắn ra ngoài một ít thì kết quả đo thể tích vẫn chính xác.", a: false}, {l: "c)", t: "Mối liên hệ đơn vị là \(1\\text{ g/cm}^3 = 1000\\text{ kg/m}^3\).", a: true}, {l: "d)", t: "Trong các bài thực hành, bắt buộc luôn phải đổi đơn vị khối lượng ra kg trước khi tính toán.", a: false} ], e: "a, c đúng. b sai vì nước bắn ra làm sai lệch thể tích dâng lên. d sai vì có thể tính theo đơn vị \(\\text{g/cm}^3\)." }, { ctx: "Khi xử lí số liệu và so sánh các kết quả tính toán khối lượng riêng.", sts: [ {l: "a)", t: "Vật nào có khối lượng riêng lớn hơn thì vật đó chắc chắn có khối lượng lớn hơn.", a: false}, {l: "b)", t: "Nhôm có \(D = 2,7\\text{ g/cm}^3\), sắt có \(D = 7,8\\text{ g/cm}^3\) nên một đơn vị thể tích của sắt nặng hơn nhôm.", a: true}, {l: "c)", t: "Công thức \(D = \\frac{m}{V}\) là công thức duy nhất cần dùng để tính khối lượng riêng từ dữ liệu thực hành.", a: true}, {l: "d)", t: "Nhiệt độ môi trường phòng thực hành hoàn toàn không ảnh hưởng gì đến khối lượng riêng của lượng nước đem đo.", a: false} ], e: "a sai vì khối lượng phụ thuộc cả thể tích. b, c đúng theo định nghĩa và công thức. d sai vì chất lỏng dãn nở vì nhiệt làm \(D\) thay đổi theo nhiệt độ." } ], short: [ { q: "Khối nhôm hình hộp chữ nhật có các cạnh 4 cm, 5 cm và 2 cm. Cân điện tử báo khối lượng 108 g. Tính khối lượng riêng của nhôm theo đơn vị \(\\text{g/cm}^3\).", a: "2,7", e: "\(V = 4 \\cdot 5 \\cdot 2 = 40\\text{ cm}^3 \\Rightarrow D = \\frac{108}{40} = 2,7\\text{ g/cm}^3\)." }, { q: "Ống đong rỗng nặng 50 g. Rót 100 mL dầu ăn vào, khối lượng tổng cộng là 130 g. Khối lượng riêng của dầu ăn tính được bằng bao nhiêu \(\\text{g/mL}\)?", a: "0,8", e: "\(m = 130 - 50 = 80\\text{ g} \\Rightarrow D = \\frac{80}{100} = 0,8\\text{ g/mL}\)." }, { q: "Hòn sỏi có khối lượng 156 g. Ban đầu mực nước trong ống đong là 50 mL, sau khi thả chìm sỏi nước dâng lên vạch 70 mL. Xác định khối lượng riêng của hòn sỏi theo đơn vị \(\\text{g/cm}^3\).", a: "7,8", e: "\(V = 70 - 50 = 20\\text{ mL} = 20\\text{ cm}^3 \\Rightarrow D = \\frac{156}{20} = 7,8\\text{ g/cm}^3\)." }, { q: "Trong báo cáo đo khối lượng, học sinh ghi lại số liệu 3 lần đo một khối gỗ là 40,1 g; 39,9 g và 40,0 g. Khối lượng trung bình của khối gỗ là bao nhiêu gam?", a: "40", e: "\(\\bar{m} = \\frac{40,1 + 39,9 + 40,0}{3} = 40\\text{ g}\)." }, { q: "Bảng khối lượng riêng cho biết đồng có \(D = 8900\\text{ kg/m}^3\). Khi thực hành với khối đồng có thể tích \(10\\text{ cm}^3\), khối lượng của khối đồng này hiển thị trên cân là bao nhiêu gam?", a: "89", e: "Đổi \(8900\\text{ kg/m}^3 = 8,9\\text{ g/cm}^3 \\Rightarrow m = 8,9 \\cdot 10 = 89\\text{ g}\)." }, { q: "Một khối gỗ hình hộp có thể tích đo được là \(50\\text{ cm}^3\). Dựa vào thực hành tính toán, học sinh biết \(D = 0,5\\text{ g/cm}^3\). Khối lượng của khối gỗ bằng bao nhiêu gam?", a: "25", e: "\(m = D \\cdot V = 0,5 \\cdot 50 = 25\\text{ g}\)." }, { q: "Để chuẩn bị thực hành, giáo viên lấy 2 lít nước cất. Biết khối lượng riêng của nước cất là \(1000\\text{ kg/m}^3\). Khối lượng của lượng nước đó bằng bao nhiêu kg?", a: "2", e: "\(V = 2\\text{ L} = 0,002\\text{ m}^3 \\Rightarrow m = 1000 \\cdot 0,002 = 2\\text{ kg}\)." }, { q: "Thể tích một khối đá granit đo bằng phương pháp dâng nước là 30 mL. Biết khối lượng riêng của đá granit là \(2,7\\text{ g/cm}^3\), khối đá này nặng bao nhiêu gam?", a: "81", e: "\(V = 30\\text{ mL} = 30\\text{ cm}^3 \\Rightarrow m = 2,7 \\cdot 30 = 81\\text{ g}\)." } 
 ] 
 },
